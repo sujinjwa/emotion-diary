@@ -167,3 +167,19 @@ header button {
 .DiaryItem .emotion_img_wrapper img {
   width: 50%;
 }
+
+.DiaryItem .info_wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.DiaryItem .diary_date {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.DiaryItem .diary_content_preview {
+  font-size: 18px;
+}
