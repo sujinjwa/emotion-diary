@@ -90,6 +90,7 @@ const DiaryList = ({ diaryList }) => {
       {getProccessedDiaryList().map((it) => (
         <DiaryItem
           key={it.id}
+          id={it.id}
           emotion={it.emotion}
           content={it.content}
           date={it.date}
