@@ -123,3 +123,47 @@ header button {
   font-family: 'Nanum Pen Script';
   font-size: 18px;
 }
+
+/* DiaryItem */
+.DiaryItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e2e2e2;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper {
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem .emotion_img_wrapper_1 {
+  background-color: #64c964;
+}
+
+.DiaryItem .emotion_img_wrapper_2 {
+  background-color: #9dd772;
+}
+
+.DiaryItem .emotion_img_wrapper_3 {
+  background-color: #fdce17;
+}
+
+.DiaryItem .emotion_img_wrapper_4 {
+  background-color: #fd8446;
+}
+
+.DiaryItem .emotion_img_wrapper_5 {
+  background-color: #fd565f;
+}
+
+.DiaryItem .emotion_img_wrapper img {
+  width: 50%;
+}

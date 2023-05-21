@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import DiaryItem from '../components/DiaryItem';
 import MyButton from './MyButton';
 
 const optionList = [
@@ -87,9 +88,12 @@ const DiaryList = ({ diaryList }) => {
         </div>
       </div>
       {getProccessedDiaryList().map((it) => (
-        <div key={it.id}>
-          {it.content} {it.emotion}
-        </div>
+        <DiaryItem
+          key={it.id}
+          emotion={it.emotion}
+          content={it.content}
+          date={it.date}
+        />
       ))}
     </div>
   );
