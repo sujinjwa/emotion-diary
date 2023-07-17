@@ -18,7 +18,7 @@ const reducer = (state, action) => {
     }
 
     case 'CREATE': {
-      newState = [...state, action.data];
+      newState = [action.data, ...state];
       break;
     }
 
@@ -76,12 +76,10 @@ const dummyData = [
 ];
 
 function App() {
-  // data가 전체 일기 데이터인가?
   const [data, dispatch] = useReducer(reducer, dummyData);
 
   const dataId = useRef();
 
-  // CREATE
   const onCreate = (date, content, emotion) => {
     dispatch({
       type: 'CREATE',
@@ -92,11 +90,9 @@ function App() {
         emotion,
       },
     });
-
     dataId.current += 1;
   };
 
-  // RERMOVE
   const onRemove = (targetId) => {
     dispatch({
       type: 'REMOVE',
@@ -104,7 +100,6 @@ function App() {
     });
   };
 
-  // EDIT
   const onEdit = (targetId, date, content, emotion) => {
     dispatch({
       type: 'EDIT',
@@ -120,10 +115,9 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/new' element={<New />} />
-              <Route path='/edit' element={<Edit />} />
+              <Route path='/edit/:id' element={<Edit />} />
               <Route path='/diary/:id' element={<Diary />} />
             </Routes>
-            {/* <RouteTest /> */}
           </div>
         </BrowserRouter>
       </DiaryDispatchContext.Provider>

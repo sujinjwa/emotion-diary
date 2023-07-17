@@ -19,7 +19,7 @@ const Edit = () => {
       <p>이곳은 일기 수정 페이지 입니다.</p>
       <button
         onClick={() => {
-          navigate('/home');
+          navigate('/');
         }}
       >
         HOME으로 가기

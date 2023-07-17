@@ -12,9 +12,7 @@ const Home = () => {
   const diaryList = useContext(DiaryStateContext);
 
   const [data, setData] = useState([]);
-
   const [currDate, setCurrDate] = useState(new Date());
-
   const headerText = `${currDate.getFullYear()}년 ${currDate.getMonth() + 1}월`;
 
   useEffect(() => {
@@ -33,7 +31,7 @@ const Home = () => {
 
       setData(
         diaryList.filter(
-          (diary) => diary.date >= firstDay && diary.date <= lastDay
+          (diary) => firstDay <= diary.date && diary.date <= lastDay
         )
       );
     }
