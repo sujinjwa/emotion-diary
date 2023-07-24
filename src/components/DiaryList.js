@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import DiaryItem from '../components/DiaryItem';
@@ -63,6 +63,10 @@ const DiaryList = ({ diaryList }) => {
     const sortedList = filteredList.sort(compare);
     return sortedList;
   };
+
+  useEffect(() => {
+    console.log(diaryList);
+  }, []);
 
   return (
     <div className='DiaryList'>
