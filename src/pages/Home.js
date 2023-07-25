@@ -16,6 +16,11 @@ const Home = () => {
   const headerText = `${currDate.getFullYear()}년 ${currDate.getMonth() + 1}월`;
 
   useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `감정 일기장`;
+  }, []);
+
+  useEffect(() => {
     if (diaryList.length >= 1) {
       const firstDay = new Date(
         currDate.getFullYear(),
